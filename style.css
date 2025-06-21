@@ -327,9 +327,9 @@ footer a:hover {
   }
 
   nav#nav-buttons {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    flex-wrap: nowrap;           /* les boutons restent sur une ligne */
+    justify-content: space-between;
+    overflow-x: hidden;          /* interdit le scroll horizontal */
   }
 
   .seo-section h2 {
@@ -357,9 +357,12 @@ footer a:hover {
   }
 
   .nav-link {
-    font-size: 0.9rem;
-    padding: 0.3rem 0.6rem;
-    white-space: nowrap;
+    font-size: 0.6rem;
+    padding: 0.4rem 0.6rem;
+    flex: 1 1 0;                 /* chaque bouton peut rétrécir */
+    min-width: 0;               /* permet une vraie réduction */
+    text-align: center;
+    white-space: nowrap;        /* garde le texte sur une seule ligne */
   }
 
   #title {
@@ -386,19 +389,20 @@ footer a:hover {
 
 /* Très petits écrans (ex : iPhone SE) */
 @media (max-width: 375px) {
-  #title {
-    font-size: 1.8rem;
-    white-space: nowrap;       /* Forcer une seule ligne */
-    overflow: hidden;
-    text-overflow: ellipsis;   /* Si trop long, affichage "..." */
-    max-width: 100%;
-    margin: 0 auto 1rem;
-  }
+ #title {
+  font-size: clamp(1.2rem, 6vw, 2.5rem); /* taille fluide */
+  white-space: nowrap;                  /* reste sur une ligne */
+  overflow: visible;
+  text-overflow: unset;
+  max-width: 100%;
+  margin: 0 auto 1rem;
+  text-align: center;
+}
 
   #countdown {
-    flex-wrap: wrap;           /* Permet au compteur de passer à plusieurs lignes */
-    gap: 0.5rem;
-    font-size: 2rem;
+    flex-wrap: nowrap;           /* Permet au compteur de passer à plusieurs lignes */
+    gap: 0.3rem;
+    font-size: 1.2rem;
     max-width: 100%;
     justify-content: center;
     margin: 0 auto 2rem;
@@ -414,7 +418,7 @@ footer a:hover {
   }
 
   .nav-link {
-    font-size: 0.85rem;
+    font-size: 0.5rem;
     padding: 0.3rem 0.6rem;
   }
 }
