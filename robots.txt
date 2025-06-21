@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://countdownuntilxmas.com/sitemap.xml
+Sitemap: https://countdowntoxmas.com/sitemap.xml
