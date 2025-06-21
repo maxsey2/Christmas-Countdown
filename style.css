@@ -1,0 +1,420 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+
+/* === AJOUT GLOBAL EN TÊTE === */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+:root {
+  --red: #b71c1c;
+  --white: #ffffff;
+  --gold: #ffcc80;
+  --shadow: rgba(0, 0, 0, 0.2);
+--background: linear-gradient(160deg, #7a1f34 0%, #3e0018 100%);
+--countdown-bg: linear-gradient(to bottom, #101d2c 0%, #243447 100%);
+
+
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Raleway', sans-serif;
+  color: var(--white);
+  background: var(--background);
+  display: flex;
+  flex-direction: column;
+  /* Suppression de align-items: center */
+  padding: 3rem 1.5rem 0.5rem; /* espace plus grand en bas pour AdSense */
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  font-size: 0.95rem;
+  background-attachment: fixed;
+  background-size: cover;
+  margin:0
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* HEADER & NAVIGATION */
+header {
+  width: 100%;
+  max-width: 960px;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#title {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(2rem, 6vw, 4rem);
+  color: var(--white);
+  text-shadow: 
+    2px 2px 4px var(--shadow),        /* ombre classique déjà présente */
+    0 0 10px rgba(255, 255, 255, 0.7), /* glow blanc doux */
+    0 0 20px rgba(255, 255, 255, 0.4);
+  margin-bottom: 2rem;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* NAVIGATION */
+nav#nav-buttons {
+  margin-top: 0rem;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 1rem;
+  overflow-x: visible;
+  font-family: 'Lora', serif;
+}
+
+.nav-link {
+  font-weight: 600;
+  color: var(--white);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid white;
+  transition: all 0.3s ease-in-out;
+  white-space: nowrap;
+  flex-shrink: 1;
+  min-width: 80px;
+  text-align: center;
+}
+
+.nav-link:hover {
+  background-color: #ffffff22; /* léger blanc transparent */
+  color: var(--white);
+  border-color: var(--white);
+  text-shadow: 0 0 4px #fff;
+}
+
+/* SEO SECTION */
+.seo-section {
+  max-width: 960px;
+  margin: 1.5rem auto 2rem;
+  text-align: center;
+}
+
+.seo-section h2 {
+   font-family: 'Lora', serif;
+  font-size: clamp(1.4rem, 5vw, 1.8rem);
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-shadow:
+    1px 1px 2px var(--shadow),
+    0 0 6px rgba(255, 255, 255, 0.7),
+    0 0 12px rgba(255, 255, 255, 0.4);
+}
+
+.seo-section p {
+  font-size: 1rem;
+  color: white;
+  margin-top: 0;
+  line-height: 1.3;
+  text-align: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  white-space: nowrap; /* force une seule ligne sur desktop */
+  overflow-x: visible; /* pas de scroll horizontal */
+}
+
+/* COUNTDOWN (pour index.html) */
+#countdown {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 15px;
+  background: var(--countdown-bg);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2), inset 0 0 10px rgba(255, 255, 255, 0.05);
+  color: var(--white);
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(2rem, 4vw, 3rem);
+  max-width: 500px;
+  margin: 0 auto 2rem;
+  justify-content: center;
+  overflow: visible;
+}
+
+#countdown span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 1;
+  min-width: 60px;
+  padding: 0rem;
+}
+
+#countdown .number {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  color: var(--white);
+  text-shadow: 1px 1px 3px var(--shadow);
+}
+
+#countdown span span:last-child {
+  font-size: 1.2rem;
+  margin-top: 0.3rem;
+  color: var(--white);
+  text-shadow: 1px 1px 3px var(--shadow);
+}
+
+/* MUSIC WIDGET PLACEHOLDER (index.html) */
+#music-widget-placeholder {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--gold);
+  text-align: center;
+  margin: 2rem auto 4rem;
+  max-width: 500px;
+  padding: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  font-family: 'Lora', serif;
+}
+
+#music-widget-placeholder p {
+  color: var(--white);
+   text-shadow:
+    1px 1px 3px var(--shadow),
+    0 0 5px rgba(255, 255, 255, 0.6),
+    0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* FOOTER */
+footer {
+  flex-shrink: 0;
+  margin-top: auto;
+  text-align: center;
+  color: var(--white);
+  font-size: 0.7rem;
+  padding: 1em 0;
+  font-family: 'Lora', serif;
+  
+  
+}
+
+footer a {
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: var(--white);
+}
+
+/* SNOWFLAKE ANIMATION */
+@keyframes snowFall {
+  0% { transform: translateY(-10px) translateX(0); }
+  100% { transform: translateY(100vh) translateX(30px); }
+}
+
+.snowflake {
+  position: fixed;
+  top: -10px;
+  color: var(--white);
+  user-select: none;
+  font-size: 1.2rem;
+  opacity: 0.8;
+  animation-name: snowFall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  pointer-events: none;
+  z-index: 15;
+}
+
+/* Styles spécifiques pour About, Privacy, Christmas Story */
+.content {
+  max-width: 700px;
+  margin: 2rem auto 4rem;
+  padding: 0 1rem;
+  line-height: 1.6;
+  color: var(--white);
+  font-size: 1rem;
+}
+
+.content h1,
+.content h2 {
+  font-family: 'Great Vibes', cursive;
+  color: var(--white);
+  margin-bottom: 1rem;
+  text-align: center;
+  text-shadow: 1px 1px 2px var(--shadow);
+}
+
+.content h1 {
+  font-size: clamp(2rem, 6vw, 3rem);
+  margin-top: 0;
+}
+
+.content h2 {
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  margin-top: 2rem;
+}
+
+.content p {
+  margin-bottom: 1.2rem;
+  text-align: justify;
+  font-family: 'Lora', serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--white);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  #countdown {
+    gap: 1.2rem;
+    padding: 1.5rem;
+  }
+
+  .nav-link {
+    padding: 0.4rem 1rem;
+    font-size: 1rem;
+  }
+
+  .content {
+    max-width: 90%;
+    padding: 0 1rem;
+    font-size: 0.95rem;
+  }
+
+  .content h1 {
+    font-size: clamp(1.6rem, 7vw, 2.6rem);
+  }
+
+  .content h2 {
+    font-size: clamp(1.2rem, 5vw, 1.6rem);
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-bottom: 0;
+  }
+
+  header {
+    margin-bottom: 2rem;
+  }
+
+  .seo-section {
+    margin: 2rem auto 3rem;
+  }
+
+  nav#nav-buttons {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .seo-section h2 {
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
+    white-space: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .seo-section p {
+    max-width: 100%;
+    white-space: normal; /* autorise le retour à la ligne */
+    overflow-x: visible;
+    text-align: center;
+  }
+
+  #countdown {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin: 0 auto 3rem;
+  }
+
+  #countdown .number {
+    font-size: clamp(1.2rem, 5vw, 2.5rem);
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+    padding: 0.3rem 0.6rem;
+    white-space: nowrap;
+  }
+
+  #title {
+    font-size: 2.4rem;
+  }
+
+  #music-widget-placeholder {
+    font-size: 1rem;
+  }
+
+  .content {
+    max-width: 95%;
+    font-size: 0.9rem;
+  }
+
+  .content h1 {
+    font-size: clamp(1.4rem, 7vw, 2rem);
+  }
+
+  .content h2 {
+    font-size: clamp(1.1rem, 5vw, 1.4rem);
+  }
+}
+
+/* Très petits écrans (ex : iPhone SE) */
+@media (max-width: 375px) {
+  #title {
+    font-size: 1.8rem;
+    white-space: nowrap;       /* Forcer une seule ligne */
+    overflow: hidden;
+    text-overflow: ellipsis;   /* Si trop long, affichage "..." */
+    max-width: 100%;
+    margin: 0 auto 1rem;
+  }
+
+  #countdown {
+    flex-wrap: wrap;           /* Permet au compteur de passer à plusieurs lignes */
+    gap: 0.5rem;
+    font-size: 2rem;
+    max-width: 100%;
+    justify-content: center;
+    margin: 0 auto 2rem;
+  }
+
+  #countdown span {
+    min-width: 45px;           /* Plus étroit pour mieux tenir */
+    padding: 0 0.3rem;
+  }
+
+  #countdown .number {
+    font-size: 1.8rem;
+  }
+
+  .nav-link {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
