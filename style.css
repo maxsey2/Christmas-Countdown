@@ -228,6 +228,45 @@ footer a:hover {
   color: var(--white);
 }
 
+.informative-content {
+  max-width: 700px;
+  margin: 3rem auto 4rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  color: var(--white);
+  font-family: 'Lora', serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+}
+
+.informative-content h2,
+.informative-content h3 {
+  font-family: 'Lora', serif;
+  color: var(--white);
+  text-align: center;
+  margin: 1rem 0;
+  text-shadow: 1px 1px 3px var(--shadow);
+}
+
+.informative-content ul {
+  margin: 1rem 0;
+  padding-left: 1.2rem;
+}
+
+.informative-content ul li {
+  margin-bottom: 0.6rem;
+  list-style-type: disc;
+  color: var(--white);
+  text-align: justify; /* Justification des éléments de liste */
+}
+
+.informative-content p {
+  margin: 1rem 0;
+  text-align: justify; /* Justification des paragraphes */
+}
+
 /* SNOWFLAKE ANIMATION */
 @keyframes snowFall {
   0% { transform: translateY(-10px) translateX(0); }
@@ -310,6 +349,13 @@ footer a:hover {
 
   .content h2 {
     font-size: clamp(1.2rem, 5vw, 1.6rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .informative-content p,
+  .informative-content ul li {
+    text-align: left;
   }
 }
 
